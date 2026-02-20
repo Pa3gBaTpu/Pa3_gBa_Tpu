@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Archive 2026: Biden & Zelenskyy</title>
+    <style>
+        /* БАЗОВІ СТИЛІ */
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --accent-ua: #fbbf24;
+            --accent-us: #3b82f6;
+            --text: #f8fafc;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ШАПКА САЙТУ */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 100%);
+            border-bottom: 4px solid var(--accent-ua);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* НАВІГАЦІЯ */
+        .filter-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-all { background: #64748b; color: white; }
+        .btn-z { background: var(--accent-ua); color: #000; }
+        .btn-b { background: var(--accent-us); color: white; }
+
+        .btn:hover { transform: scale(1.1); opacity: 0.9; }
+
+        /* СІТКА МЕМІВ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .meme-card {
+            background: var(--card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            transition: 0.4s;
+        }
+
+        .meme-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: var(--accent-ua);
+        }
+
+        /* ТУТ ЖИВУТЬ КАРТИНКИ */
+        .img-container {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Щоб картинка не розтягувалася криво */
+        }
+
+        .info {
+            padding: 20px;
+        }
+
+        .info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+            color: var(--accent-ua);
+        }
+
+        .info p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #475569;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Meme Archive 2026</h1>
+    <p>Петро Григорович, приємного перегляду</p>
+</header>
+
+<div class="container">
+    <div class="filter-box">
+        <button class="btn btn-all" onclick="show('all')">Усі</button>
+        <button class="btn btn-z" onclick="show('z')">Зеленський</button>
+        <button class="btn btn-b" onclick="show('b')">Байден</button>
+    </div>
+
+    <div class="grid">
+        
+        <div class="meme-card z">
+            <div class="img-container">
+                <img src="zelya166.jpg" alt="Meme 1">
+            </div>
+            <div class="info">
+                <h2>Коли дали ППО</h2>
+                <p>Епічний момент радості та залізної витримки.</p>
+            </div>
+        </div>
+
+        <div class="meme-card b">
+            <div class="img-container">
+                <img src="biden123.jpg" alt="Meme 2">
+            </div>
+            <div class="info">
+                <h2>Dark Brandon Mode</h2>
+                <p>Джо знову вдягнув авіатори — чекай на нові санкції.</p>
+            </div>
+        </div>
+
+        <div class="meme-card z">
+            <div class="img-container">
+                <img src="zelya14.jpg" alt="Meme 3">
+            </div>
+            <div class="info">
+                <h2>Вечірнє звернення</h2>
+                <p>Бажаю здоров'я, дорогі мемороби!</p>
+            </div>
+        </div>
+
+        <div class="meme-card b">
+            <div class="img-container">
+                <img src="biden124.jpg" alt="Meme 4">
+            </div>
+            <div class="info">
+                <h2>Морозиво сили</h2>
+                <p>Смак 5-ї статті НАТО.</p>
+            </div>
+        </div>
+
+        <div class="meme-card z">
+            <div class="img-container">
+                <img src="zelya11.jpg" alt="Meme 5">
+            </div>
+            <div class="info">
+                <h2>Зе-стиль</h2>
+                <p>Худі, яке стало легендарним.</p>
+            </div>
+        </div>
+
+        <div class="meme-card b">
+            <div class="img-container">
+                <img src="joebiden1.1.jpg" alt="Meme 6">
+            </div>
+            <div class="info">
+                <h2>Hello, Kyiv!</h2>
+                <p>Той самий візит, який змінив гру.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Створено для хорошої оцінки(13)</p>
+</footer>
+
+<script>
+    // Проста функція фільтрації
+    function show(category) {
+        const cards = document.querySelectorAll('.meme-card');
+        cards.forEach(card => {
+            if (category === 'all') {
+                card.style.display = 'block';
+            } else {
+                card.classList.contains(category) ? card.style.display = 'block' : card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
